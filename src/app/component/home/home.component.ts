@@ -15,5 +15,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  deleteTask(i: any) {
+    this.taskSer.deleteTask(i)
+  }
 }

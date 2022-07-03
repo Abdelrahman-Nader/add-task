@@ -6,6 +6,15 @@ import { Task } from '../interface/task';
 })
 export class TaskesService {
 
-  public tasks: Array<Task> =[]
+  public tasks: Array<Task> =[
+    {
+      title: "1",
+      Description: "mens",
+      id: 1,
+    }
+  ]
   constructor() { }
+  deleteTask(i:any): void {
+    this.tasks.splice(i, 1)
+  }
 }
