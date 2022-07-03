@@ -2,10 +2,13 @@
  <a routerLink="add-task"> Add Task </a> 
 </div>
 
-<div *ngIf= "taskSer.taskes.length == 0 " >
+<div *ngIf= "taskSer.tasks.length == 0 " >
     no taskes add
 </div>
 
-<div>
+<div *ngFor=" let task of taskSer.tasks; index as i">
+    <a [routerLink]="['/task', i]">
+        {{task.title}}
+    </a>
 
 </div>

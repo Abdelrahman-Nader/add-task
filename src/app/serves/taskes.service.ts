@@ -6,6 +6,6 @@ import { Task } from '../interface/task';
 })
 export class TaskesService {
 
-  tasks: Array<Task> =[]
+  public tasks: Array<Task> =[]
   constructor() { }
 }

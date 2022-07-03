@@ -8,8 +8,8 @@ import { TaskesService } from 'src/app/serves/taskes.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private taskSer:TaskesService ) {
-    this.taskSer.tasks 
+  constructor(public taskSer:TaskesService ) {
+    // this.taskSer.tasks 
     
   }
 
