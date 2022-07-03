@@ -1,4 +1,11 @@
-<button routerLink="task">Add Task</button>
 <div>
-<router-outlet></router-outlet>
+ <a routerLink="add-task"> Add Task </a> 
+</div>
+
+<div *ngIf= "taskSer.taskes.length == 0 " >
+    no taskes add
+</div>
+
+<div>
+
 </div>
