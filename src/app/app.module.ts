@@ -7,6 +7,7 @@ import { HomeComponent } from './component/home/home.component';
 import { AddTaskComponent } from './component/add-task/add-task.component';
 import { TaskComponent } from './component/task/task.component';
 import { NotFoundComponent } from './component/not-found/not-found.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NotFoundComponent } from './component/not-found/not-found.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

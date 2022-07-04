@@ -23,4 +23,7 @@ export class TaskesService {
     })
 
   }
+  editTask(i, data){
+
+  }
 }

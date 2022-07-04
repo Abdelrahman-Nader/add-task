@@ -1,4 +1,6 @@
+import { TaskesService } from 'src/app/serves/taskes.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-task',
@@ -6,10 +8,41 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./task.component.css']
 })
 export class TaskComponent implements OnInit {
+  taskId: any
+  task: any
 
-  constructor() { }
+  constructor(private rout: ActivatedRoute,
+    public taskSer: TaskesService,
+    private rouetr: Router) { }
 
   ngOnInit(): void {
+    this.taskId = this.rout.snapshot.paramMap.get('id')
+
+    this.task = this.taskSer.tasks[this.taskId]
   }
+}
+addTask(){
+  this.taskSer.editTask(this.taskId, this.task)
+  this.router.navigate(['/'])
 
 }
+deleteRout(){
+  this.taskSer.deleteTask(this.taskId)
+}
+rout(){
+  this.router.navigate(['/'])
+}
+
+
+function addTask() {
+  throw new Error('Function not implemented.');
+}
+
+function deleteRout() {
+  throw new Error('Function not implemented.');
+}
+
+function rout() {
+  throw new Error('Function not implemented.');
+}
+

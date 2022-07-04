@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TaskesService } from 'src/app/serves/taskes.service';
 
 @Component({
   selector: 'app-add-task',
@@ -8,12 +9,12 @@ import { Router } from '@angular/router';
 })
 export class AddTaskComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public taskSer:TaskesService) { }
 
   ngOnInit(): void {
   }
   addTask(titelName:any, des:any){
-    this.addTask(titelName.value, des.value),
+    this.taskSer.addTask(titelName.value, des.value),
     this.router.navigate(['/'])
 
   }
