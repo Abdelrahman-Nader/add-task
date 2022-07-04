@@ -10,11 +10,17 @@ export class TaskesService {
     {
       title: "1",
       Description: "mens",
-      id: 1,
     }
   ]
   constructor() { }
   deleteTask(i:any): void {
     this.tasks.splice(i, 1)
+  }
+  addTask(title:string, Description:string){
+    this.tasks.push({
+      title,
+      Description
+    })
+
   }
 }

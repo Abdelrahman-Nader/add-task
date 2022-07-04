@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-task',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddTaskComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
+  addTask(titelName:any, des:any){
+    this.addTask(titelName.value, des.value),
+    this.router.navigate(['/'])
 
+  }
+  rout(){
+    this.router.navigate(['/'])
+  }
 }

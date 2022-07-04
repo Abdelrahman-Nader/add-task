@@ -1,8 +1,7 @@
 <div>
-    <p>title</p>
-    <p>details</p>
+    <input #titleName type="text" placeholder="Title name"></input>
+    <textarea #des placeholder="add details"></textarea>
 </div>
 
-<button>edit</button>
-<a >Save</a>
-<button>Remove</button>
+<button (click)="addTask(titlName, des)" routerlink="">save</button>
+<button (click)="rout()">Remove</button>
