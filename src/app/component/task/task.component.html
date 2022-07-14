@@ -2,8 +2,8 @@
   <p>cant match any id</p>
 </div>
 <div *ngIf="taskId">
-  <input type="text" placeholder="Title name" [(ngModel)]="tasksName.title">
-  <textarea placeholder="add details" [(ngModel)]="tasksName.description"></textarea>
-  <button (click)="addTask()" (click)="rout()">save</button>
+  <input type="text" placeholder="Title name" [(ngModel)]="taskId.title">
+  <textarea placeholder="add details" [(ngModel)]="task.description"></textarea>
+  <button (click)="addTask()" (click)="rout1()">save</button>
   <button (click)="deleteRout()">Remove</button>
 </div>

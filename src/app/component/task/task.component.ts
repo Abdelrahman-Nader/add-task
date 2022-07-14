@@ -20,29 +20,24 @@ export class TaskComponent implements OnInit {
 
     this.task = this.taskSer.tasks[this.taskId]
   }
-}
-addTask(){
-  this.taskSer.editTask(this.taskId, this.task)
-  this.router.navigate(['/'])
+
+  addTask() {
+    this.taskSer.editTask(this.taskId, this.task)
+    this.rouetr.navigate(['/'])
+
+  }
+
+  deleteRout(){
+    this.taskSer.deleteTask(this.taskId);
+  }
+  rout1(){
+    this.rouetr.navigate(['/'])
+  }
+
+
 
 }
-deleteRout(){
-  this.taskSer.deleteTask(this.taskId)
-}
-rout(){
-  this.router.navigate(['/'])
-}
 
 
-function addTask() {
-  throw new Error('Function not implemented.');
-}
 
-function deleteRout() {
-  throw new Error('Function not implemented.');
-}
-
-function rout() {
-  throw new Error('Function not implemented.');
-}
 
