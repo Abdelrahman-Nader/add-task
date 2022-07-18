@@ -22,7 +22,9 @@ export class TaskComponent implements OnInit {
   ngOnInit(): void {
     this.taskId = this.rout.snapshot.paramMap.get('id')
 
-    this.task = this.taskSer.tasks[this.taskId]
+    setTimeout(() => {
+      this.task = this.taskSer.tasks[this.taskId]
+    }, 1000)
   }
 
   addTask() {

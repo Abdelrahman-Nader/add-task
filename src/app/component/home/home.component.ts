@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
 
   constructor(public taskSer:TaskesService, public title: Title ) {
     // this.taskSer.tasks
-    this.title.setTitle('Task Manger')
+    this.title.setTitle('Task Manager')
   }
 
   ngOnInit(): void {
