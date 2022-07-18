@@ -1,3 +1,4 @@
+import { Title } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TaskesService } from 'src/app/serves/taskes.service';
@@ -9,7 +10,11 @@ import { TaskesService } from 'src/app/serves/taskes.service';
 })
 export class AddTaskComponent implements OnInit {
 
-  constructor(private router: Router, public taskSer:TaskesService) { }
+  constructor(private router: Router,
+    public taskSer:TaskesService,
+    public title: Title) {
+    this.title.setTitle('Add New Task - Task Manager')
+    }
 
   ngOnInit(): void {
   }

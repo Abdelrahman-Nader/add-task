@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { TaskesService } from 'src/app/serves/taskes.service';
 
 @Component({
@@ -8,9 +9,9 @@ import { TaskesService } from 'src/app/serves/taskes.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public taskSer:TaskesService ) {
-    // this.taskSer.tasks 
-    
+  constructor(public taskSer:TaskesService, public title: Title ) {
+    // this.taskSer.tasks
+    this.title.setTitle('Task Manger')
   }
 
   ngOnInit(): void {
