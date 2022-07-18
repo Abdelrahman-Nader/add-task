@@ -28,7 +28,8 @@ export class TaskComponent implements OnInit {
   }
 
   deleteRout(){
-    this.taskSer.deleteTask(this.taskId);
+    this.taskSer.deleteTask(this.taskId)
+    this.rouetr.navigate(['/']);
   }
   rout1(){
     this.rouetr.navigate(['/'])
