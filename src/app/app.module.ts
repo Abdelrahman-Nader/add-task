@@ -9,20 +9,21 @@ import { TaskComponent } from './component/task/task.component';
 import { NotFoundComponent } from './component/not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AddTaskComponent,
     TaskComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
