@@ -7,10 +7,7 @@ import { Task } from '../interface/task';
 export class TaskesService {
 
   public tasks: Array<Task> =[
-    {
-      title: "1",
-      Description: "mens",
-    }
+  
   ]
   constructor() { }
   deleteTask(i:any): void {
@@ -24,6 +21,6 @@ export class TaskesService {
 
   }
   editTask(i: any, data:any){
-
+    this.tasks[i] = data
   }
 }

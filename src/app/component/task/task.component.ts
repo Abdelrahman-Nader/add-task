@@ -1,3 +1,4 @@
+import { Title } from '@angular/platform-browser';
 import { TaskesService } from 'src/app/serves/taskes.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -13,12 +14,17 @@ export class TaskComponent implements OnInit {
 
   constructor(private rout: ActivatedRoute,
     public taskSer: TaskesService,
-    private rouetr: Router) { }
+    private rouetr: Router,
+    public title: Title) {
+      this.title.setTitle( 'Task Manager')
+    }
 
   ngOnInit(): void {
     this.taskId = this.rout.snapshot.paramMap.get('id')
 
-    this.task = this.taskSer.tasks[this.taskId]
+    setTimeout(() => {
+      this.task = this.taskSer.tasks[this.taskId]
+    }, 1000)
   }
 
   addTask() {
@@ -28,7 +34,8 @@ export class TaskComponent implements OnInit {
   }
 
   deleteRout(){
-    this.taskSer.deleteTask(this.taskId);
+    this.taskSer.deleteTask(this.taskId)
+    this.rouetr.navigate(['/']);
   }
   rout1(){
     this.rouetr.navigate(['/'])

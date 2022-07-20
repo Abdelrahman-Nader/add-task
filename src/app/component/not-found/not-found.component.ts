@@ -1,3 +1,4 @@
+import { Title } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotFoundComponent implements OnInit {
 
-  constructor() { }
+  constructor(public title: Title) {
+    this.title.setTitle('Ooooooops........');
+  }
 
   ngOnInit(): void {
   }
