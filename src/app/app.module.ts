@@ -10,21 +10,25 @@ import { NotFoundComponent } from './component/not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AddTaskComponent,
     TaskComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+<<<<<<< HEAD
     NgbModule
+=======
+>>>>>>> f21360ebcddcbec7b20c28168aafa1da9e19992b
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

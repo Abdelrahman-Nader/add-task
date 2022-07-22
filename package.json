@@ -19,9 +19,14 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
+<<<<<<< HEAD
     "@ng-bootstrap/ng-bootstrap": "^12.1.2",
     "@popperjs/core": "^2.10.2",
     "bootstrap": "^5.2.0",
+=======
+    "bootstrap": "^5.2.0",
+    "ngx-bootstrap": "^8.0.0",
+>>>>>>> f21360ebcddcbec7b20c28168aafa1da9e19992b
     "rxjs": "^7.5.6",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
