@@ -8,6 +8,7 @@ import { AddTaskComponent } from './component/add-task/add-task.component';
 import { TaskComponent } from './component/task/task.component';
 import { NotFoundComponent } from './component/not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

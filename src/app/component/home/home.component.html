@@ -1,15 +1,15 @@
 <div>
- <a routerLink="add-task"> Add Task </a> 
+  <a class="btn btn-primary" routerLink="add-task"> Add Task </a>
 </div>
 
-<div *ngIf= "taskSer.tasks.length == 0 " >
-    no taskes add
+<div *ngIf="taskSer.tasks.length == 0 ">
+  no taskes add
 </div>
 
 <div *ngFor=" let task of taskSer.tasks; index as i">
-    <a [routerLink]="['/task', i]">
-        {{task.title}}
-    </a>
-    <button (click)="deleteTask(i)" > delete</button>
+  <a [routerLink]="['/task', i]">
+    {{task.title}}
+  </a>
+  <button class="btn btn-danger" (click)="deleteTask(i)"> delete</button>
 
 </div>
